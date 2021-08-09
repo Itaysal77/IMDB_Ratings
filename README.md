@@ -6,4 +6,5 @@ Technologies I will use:
  - IMDB API
  - Tkinter
  
- 
+ Coding language:
+ Python
