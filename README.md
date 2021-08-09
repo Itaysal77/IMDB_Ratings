@@ -5,6 +5,3 @@ A GUI that given a movie/Tv show name, will return it's rating from the IMDB web
 Technologies I will use:
  - IMDB API
  - Tkinter
- 
- Coding language:
- Python
