@@ -44,4 +44,4 @@ if __name__ == "__main__":
 
     rating = response.json()["imdbRating"]
 
-    print (f'The rating of {name} that came out in {year} is:  {rating}')
+    print (f'The rating of {name} %sis: {rating}'%(f'that came out in {year} ' if year!="0" else""))
