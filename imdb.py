@@ -13,7 +13,7 @@ if __name__ == "__main__":
     gui=Tkinter.Tk()
 
     name = raw_input("Enter Movie name \n")
-        year=input("Enter Movie year if known, else enter 0 \n")
+    year=input("Enter Movie year if known, else enter 0 \n")
 
     url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
 
