@@ -13,6 +13,7 @@ if __name__ == "__main__":
     gui=Tkinter.Tk()
 
     name = raw_input("Enter Movie name \n")
+        year=input("Enter Movie year if known, else enter 0 \n")
 
     url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
 
@@ -24,9 +25,12 @@ if __name__ == "__main__":
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-
-    id=response.json()["Search"][0]["imdbID"]
-
+   all=response.json()["Search"]
+    if year!="0":
+        ind = next((index for (index, d) in enumerate(all) if d["Year"] == f'{year}'), None)
+    else: ind=0
+        
+    id=all[ind]["imdbID"]
     url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
 
     querystring = {"i": id, "r": "json"}
@@ -40,4 +44,4 @@ if __name__ == "__main__":
 
     rating = response.json()["imdbRating"]
 
-    print ("The rating of " + name + " is: " + rating)
+    print (f'The rating of {name} that came out in {year} is:  {rating}')
